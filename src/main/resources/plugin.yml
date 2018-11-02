@@ -1,0 +1,12 @@
+name: InfinitySnap
+main: com.applenick.InfinitySnap.InfinitySnap
+version: 1.0.0-SNAPSHOT
+author: AppleNick
+
+commands:
+  snap:
+    description: Balance the server
+    usage: /<command> (type)
+  souls:
+    description: View who has been snapped.
+    usage: /<command>

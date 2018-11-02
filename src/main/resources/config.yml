@@ -1,0 +1,69 @@
+###############################################################################################                                                                                            
+#  ██╗███╗   ██╗███████╗██╗███╗   ██╗██╗████████╗██╗   ██╗███████╗███╗   ██╗ █████╗ ██████╗  
+#  ██║████╗  ██║██╔════╝██║████╗  ██║██║╚══██╔══╝╚██╗ ██╔╝██╔════╝████╗  ██║██╔══██╗██╔══██╗ 
+#  ██║██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║   ██║    ╚████╔╝ ███████╗██╔██╗ ██║███████║██████╔╝ 
+#  ██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║     ╚██╔╝  ╚════██║██║╚██╗██║██╔══██║██╔═══╝  
+#  ██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║      ██║   ███████║██║ ╚████║██║  ██║██║      
+#  ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝      
+#            Created by AppleNick - Contact @AppleNick for assistance                                                                                           
+#
+###############################################################################################                                                                                            
+# Snap Options
+###############################################################################################                                                                                                                                                                                       
+snap:
+  #Delay in SECONDS between the snap action for each player. Set to 0 for no delay.
+  delay: 1
+  
+  #The default snap type will be the type of snap that is used when using /snap with no arguments.
+  #You can always specify /snap [type] when using the command in-game.
+  #Snap Types: 
+  #  1. Message: Will send a configurable message to all those chosen
+  #  2. Kick: Will kick all selected players with a delay and message
+  #  3. Ban: Will kick each player then disallow them from reconnecting, banned names will be found in the souls.txt file.
+  default-type: message
+  
+  #When true, the souls.txt file will be saved as soon as any change is made to the list. 
+  #This will result in some minor performance decrease, but in exchange for ensuring no changes are lost in case of a server crash.
+  #Set to false to only save on plugin shutdown.
+  instant-save: true
+  
+  #Plays an effect before the snap occurs. When a player is snapped a cool effect will be played
+  # around them to stimulate them being snapped. After the effect is complete the main snap action
+  # will be completed (such as kicking the player).
+  effect-enabled: true
+  
+  #When true, will hide "left server" message for each snapped player.
+  hide-leave-message: true
+  
+  #When true, any player with the permission "snap.ignore" or OP will be spared from all snap selections.
+  allow-ignore-perms: true
+  
+  #This is the configurable message sent to the command sender of /snap after the snap has been completed.
+  # VARIABLES:
+  # '%snapped%' - When placed in message will display the # of players who were snapped.
+  # '%total' - When placed in message will display the total # of players before the snap.
+  #
+  final-message: "&tPerfectly Balanced &7- (&b%snapped% &7/ &3%total%&7)"
+  
+  # Messages from this list will be chosen at random and sent to the command sender as they perform /snap
+  # NOTE: you can use &t to display a randomly chosen chat color.
+  snap-quotes:
+    - "&tFun isn’t something one considers when balancing a server. But this... does put a smile on my face."
+    - "&tThe hardest choices require the strongest wills."
+    - "&tFine, I'll do it myself."
+
+###############################################################################################                                                                                            
+# Messages
+###############################################################################################                                                                                                
+snap-ban:
+  #This message will be sent to players who are snapped with the ban type snap.
+  ban-message: "&cYou have been snapped!"
+    
+snap-kick:
+  #This message will be sent to players who are snapped with the kick type snap.
+  kick-message: "&cYou have been snapped!"  
+      
+snap-message:
+  #This message will be broadcast to players who are selected for the message type snap.
+  broadcast-message: "&t%player% &6has been snapped!"
+  
